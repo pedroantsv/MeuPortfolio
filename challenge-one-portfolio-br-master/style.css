@@ -1,0 +1,408 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo: #F5F5F5;
+   --cor-de-link: #033a8d;
+   --azul-claro: #e0f7fa;
+   --azul-escuro: #bbdefb;
+   --cor-secundaria:rgba(93, 137, 172, 0.247);
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/*Sessão Menu*/
+
+.menu {
+    background-color: var(--azul-escuro);; /* Cor de fundo desejada */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.menu header {
+    display: flex; /* Usar flex para organizar a imagem e o título lado a lado */
+    align-items: center; /* Alinhar verticalmente a imagem e o título */
+    justify-content: flex-start; /* Manter os itens à esquerda */
+    gap: 10px; /* Adicionar espaço entre a imagem e o título */
+}
+
+.menu header img {
+    width: auto; /* Definir a largura da imagem */
+    height: auto; /* Manter a proporção da imagem */
+}
+
+.menu__title {
+    margin: 0; /* Remover margens padrão */
+    font-size: 24px; /* Ajustar o tamanho da fonte conforme desejado */
+    font-weight: bold; /* Definir o título em negrito */
+}
+
+.menu nav {
+    display: flex; /* Usar flex para organizar os itens do menu lado a lado */
+    justify-content:flex-end; /* Distribuir os itens do menu com espaço entre eles */
+    align-items: center; /* Alinhar verticalmente os itens do menu */
+}
+
+.menu__list {
+    list-style: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover o preenchimento padrão */
+    margin: 0; /* Remover margens padrão */
+    display: flex; /* Usar flex para organizar os itens lado a lado */
+    gap: 15px; /* Adicionar espaço entre os itens do menu */
+}
+
+.menu__list__item {
+    margin-left: auto; /* Mover o item de contato para a direita */
+}
+
+/*Sessão Title*/
+
+.title {
+    display: flex; /* Usar flex para organizar os elementos em linha */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Centralizar verticalmente */
+    padding: 5% 5%; /* Adicionar espaçamento interno */
+}
+
+.title__div {
+    display: flex; /* Flex dentro de title para organizar os elementos */
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center; /* Centralizar verticalmente */
+    flex-direction: row-reverse; /* Inverte a direção do flex para colocar a imagem à direita */
+}
+
+.title__container {
+    flex: 1; /* Permitir que o texto ocupe todo o espaço disponível à esquerda */
+}
+
+.title__bio{
+    margin: 1% 0%; /* Remover margem padrão dos cabeçalhos */
+    font-size: 250%;
+    font-style: italic;
+}
+.title__subsection {
+    margin: 0; /* Remover margem padrão dos cabeçalhos */
+    font-size: 120%;
+}
+
+.title__network {
+    display: flex; /* Organizar os itens em linha */
+    list-style-type: none; /* Remover marcadores de lista */
+    padding: 0; /* Remover padding */
+    margin-top: 1%; /* Espaçamento entre o título e a lista de redes */
+}
+
+.title__network__item {
+    margin-right: 10px; /* Espaçamento entre os itens */
+    font-size: 100%;
+    color: var(--cor-de-link);
+}
+
+.title__profile {
+    border-radius: 50%; /* Torna a imagem redonda, se desejar */
+    width: 30%; /* Definir a largura como 30% do contêiner */
+    height: auto; /* Manter a proporção da imagem */
+}
+
+
+/*Sessão About*/
+
+section.about{
+    background-color: var(--cor-secundaria); /* Cor de fundo desejada */
+    padding: 2% 5%;
+}
+/*Sessão Skills*/
+.skills {
+    padding: 1%; /* Adicionar um espaçamento interno */
+}
+
+.skills__title {
+    text-align: center; /* Centraliza o texto "Skills" */
+    margin-bottom: 20px; /* Espaçamento entre o título e a linha de habilidades */
+}
+
+.skills__line {
+    display: flex; /* Usar flex para alinhar os itens lado a lado */
+    flex-wrap: wrap; /* Permitir que os itens se quebrem para outra linha, se necessário */
+    justify-content:center; /* Centralizar os itens horizontalmente */
+    gap: 5%; /* Adicionar um espaçamento entre os itens */
+}
+
+.skills__box {
+    display: flex; /* Organizar os itens dentro do box */
+    flex-direction: column; /* Organizar os itens em uma coluna */
+    justify-content:center; /* Centralizar os itens horizontalmente */
+    align-items:start; /* Centralizar os itens dentro do box */
+    background-color:var(--cor-secundaria);
+    padding: 1%; /* Adicionar um espaçamento interno ao box */
+    height: 100px; /* Definir uma altura fixa para manter as caixas do mesmo tamanho */
+    width: 100px; /* Definir uma largura fixa para manter as caixas do mesmo tamanho */
+}
+
+.skills__img {
+    margin:  0; /* Espaçamento entre a imagem e o nome */
+    align-items: center; /* Centralizar os itens dentro do box */
+}
+.skills__img img {
+    width: 50%; /* Defina a largura desejada para as imagens */
+    height: 50%; /* Defina a altura desejada para as imagens */
+    object-fit: contain; /* Garante que a imagem se ajuste dentro das dimensões sem distorção */
+}
+.skills__name {
+    text-align: center; /* Centralizar o texto */
+    margin: 0; /* Remover margem padrão */
+}
+
+
+/*Sessão Hobbies*/
+
+section.hobbies{
+    padding: 1%; /* Adicionar um espaçamento interno */
+}
+
+.hobbies__title {
+    text-align: center; /* Centraliza o texto "Skills" */
+    margin-bottom: 20px; /* Espaçamento entre o título e a linha de habilidades */
+}
+
+.hobbies__line {
+    display: flex; /* Usar flex para alinhar os itens lado a lado */
+    flex-wrap: wrap; /* Permitir que os itens se quebrem para outra linha, se necessário */
+    justify-content:center; /* Centralizar os itens horizontalmente */
+    gap: 5%; /* Adicionar um espaçamento entre os itens */
+}
+
+.hobbies__box {
+    display: flex; /* Organizar os itens dentro do box */
+    flex-direction: column; /* Organizar os itens em uma coluna */
+    justify-content:center /* Centralizar os itens horizontalmente */
+    align-items:start; /* Centralizar os itens dentro do box */
+    background-color:var(--cor-secundaria);
+    padding: 1%; /* Adicionar um espaçamento interno ao box */
+    height: 100px; /* Definir uma altura fixa para manter as caixas do mesmo tamanho */
+    width: 100px; /* Definir uma largura fixa para manter as caixas do mesmo tamanho */
+    margin-bottom: 20px;
+}
+
+.hobbies__img {
+    margin:  1% 1%; /* Espaçamento entre a imagem e o nome */
+    align-items: center; /* Centralizar os itens dentro do box */
+}
+.hobbies__img img {
+    width: 50%; /* Defina a largura desejada para as imagens */
+    height: 50%; /* Defina a altura desejada para as imagens */
+    object-fit: contain; /* Garante que a imagem se ajuste dentro das dimensões sem distorção */
+}
+.hobbies__name {
+    text-align: center; /* Centralizar o texto */
+    margin: 0; /* Remover margem padrão */
+}
+
+/* Experiência Acadêmica*/
+
+.academic {
+    padding: 20px; /* Adicionar espaçamento interno */
+    background-color: var(--azul-claro);; /* Definir um tom de azul como cor de fundo */
+}
+
+.academic__title {
+    text-align: center; /* Centralizar o título */
+    margin-bottom: 20px; /* Adicionar espaçamento abaixo do título */
+}
+
+.academic__courses {
+    display: flex; /* Usar flex para organizar os elementos lado a lado */
+    justify-content: space-around; /* Distribuir os elementos com espaço entre eles */
+}
+
+.academic__courses__box {
+    background-color:var(--azul-escuro); /* Um tom mais claro de azul como cor de fundo para as caixas */
+    padding: 10px; /* Adicionar espaçamento interno */
+    border-radius: 5px; /* Adicionar arredondamento aos cantos */
+    text-align: center; /* Centralizar o texto nas caixas */
+    width: 200px; /* Definir uma largura fixa para as caixas */
+}
+
+
+.academic__courses__list {
+    list-style: none; /* Remover os marcadores de lista */
+    padding: 0; /* Remover o preenchimento da lista */
+    margin: 0; /* Remover as margens */
+}
+
+.academic__courses__item__img img {
+    width: 100%; /* Ajustar a largura da imagem à caixa */
+    height: auto; /* Manter a proporção da imagem */
+
+}
+
+
+.academic__courses__item__title,
+.academic__courses__item__subtitle {
+    margin: 5px 0; /* Adicionar espaçamento acima e abaixo */
+}
+
+/* experiência*/
+
+.experience__section__title {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo do título */
+}
+
+
+.experiencie__box {
+    display: flex; /* Utiliza flexbox para organizar as colunas lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre as colunas */
+    align-items: center; /* Alinha verticalmente o conteúdo dentro da linha */
+}
+
+.experience__img {
+    width: 50%; /* Define a largura desejada para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-left: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+.experience__title {
+    font-weight: bold; /* Torna o título em negrito */
+    font-size: 195%; /* Ajuste o tamanho da fonte conforme desejado */
+}
+
+.experience__text {
+    font-size: 110%; /* Ajuste o tamanho da fonte conforme desejado */
+}
+
+
+
+/*Contato*/
+
+.formcontato {
+    padding: 20px; /* Adicionar espaçamento interno */
+    background-color: #f8f9fa; /* Cor de fundo leve */
+}
+
+.formcontato__contacto {
+    display: flex; /* Usar flex para organizar os elementos lado a lado */
+    justify-content: space-between; /* Distribuir os elementos com espaço entre eles */
+    align-items: stretch; /* Esticar os elementos para a mesma altura */
+    padding: 20px; /* Adicionar espaçamento interno */
+    border-radius: 5px; /* Adicionar arredondamento aos cantos */
+    background-color: var(--azul-claro); /* Cor de fundo branca */
+}
+
+.formcontato__img {
+    width: auto; /* Definir a largura como 50% do contêiner */
+    height: auto; /* Manter a proporção da imagem */
+}
+
+.formcontato__text {
+    width: 50%; /* Definir a largura como 50% do contêiner */
+    padding-left: 20px; /* Adicionar espaçamento à esquerda */
+}
+
+.formcontato__form {
+    display: flex; /* Usar flex para organizar os elementos verticalmente */
+    flex-direction: column; /* Organizar os elementos em coluna */
+    gap: 10px; /* Adicionar espaço entre os elementos */
+}
+
+.formcontato__input,
+.formcontato__textarea {
+    padding: 10px; /* Adicionar espaçamento interno */
+    border: 1px solid #ced4da; /* Adicionar uma borda leve */
+    border-radius: 5px; /* Adicionar arredondamento aos cantos */
+    margin-bottom: 10px; /* Adicionar espaço abaixo de cada campo */
+}
+
+.formcontato__botao {
+    padding: 10px 20px; /* Adicionar espaçamento interno ao botão */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto branca */
+    border: none; /* Remover a borda padrão */
+    border-radius: 5px; /* Adicionar arredondamento aos cantos */
+    cursor: pointer; /* Alterar cursor para ponteiro ao passar por cima */
+}
+
+
+/*footeer*/
+
+section.footer{
+    padding: 20px; /* Adicionar espaçamento interno */
+}
+
+.footer__rodape {
+    text-align: center; /* Centralizar horizontalmente os textos dentro do rodapé */
+    margin: 0; /* Remover qualquer margem padrão */
+
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menu */
+
+/*title*/
+
+/*hobbies*/
+
+/*Hobbies*/
+
+/*Experiências acadêmicas*/
+
+/*Expeirência profissional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sessão sobre*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formação Acadêmica*/
+
+/*Experiência Profissional*/
+
+ /*Contato*/
+
+/*Footer*/
+
+}
